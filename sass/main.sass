@@ -1,0 +1,130 @@
+@import "vars"
+
+// Шрифты //
+@import "fonts"
+
+// База //
+html, body
+	width: 100%
+	height: 100%
+h1, h2, h3, h4, h5, h6, ul, p
+	padding: 0
+	margin: 0
+ul
+	list-style: none
+\:focus, \:active
+	outline: 0 !important
+a, a:focus, a:active, a:hover
+	text-decoration: none !important
+*
+	box-sizing: border-box
+
+body
+	font-weight: 400
+	font-size: 16px
+	font-family: Montserrat
+	color: #000000
+// Стили //
+.header
+	display: flex
+	height: 100vh
+	background-color: #666666
+	&__block
+		&-left
+			padding-bottom: 40px
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-content: flex-end
+			width: 6%
+			box-shadow: 0 50px 250px rgba(0, 0, 0, 0.2)
+			background-color: #ffffff
+		&-right
+
+			width: 94%
+			background: url("../img/bg.png") top center no-repeat
+			background-size: cover
+	&__item
+		position: relative
+		font-size: 22px
+		font-weight: 700
+		text-transform: uppercase
+
+		&-gr
+			color: #b3b3b3
+			font-size: 22px
+			font-weight: 400
+			line-height: 30px
+			text-transform: uppercase
+
+
+		&:nth-child(1)
+			position: absolute
+			transform: rotate(-90deg)
+			top: 450px
+			left: calc(100%- 160px)
+	.menu
+		padding-top: 100px
+		display: flex
+		justify-content: space-between
+		&__list
+			display: flex
+			align-items: center
+			font-size: 22px
+			font-weight: 400
+			line-height: 30px
+		&__item
+			margin-left: 70px
+		&__link
+			color: black
+			&-active
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100px
+				height: 41px
+				border-radius: 20px
+				color: white
+				background-color: #000000
+
+		&__logo
+			color: #000000
+			font-size: 40px
+			font-weight: 700
+			line-height: 30px
+.container
+	width: 89%
+	margin: 0 auto
+.explore
+	margin-top: calc(100% - 56%)
+	display: flex
+	justify-content: center
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 300px
+		height: 60px
+		border-radius: 30px
+		background-color: #000000
+		color: #f0cdac
+		font-size: 20px
+		text-transform: uppercase
+		letter-spacing: 0.8px
+.menu-mobile, .menu-m
+	display: none
+.menu-m
+	position: fixed
+	z-index: 9999
+	background: #FFF
+	height: 435px
+	width: 100%
+	padding-top: 100px
+.menu-m__item
+	text-align: center
+.menu-m__link
+	font-size: 40px
+	color: #818D9C
+	text-decoration: none
+// Адаптив //
+@import "media"
